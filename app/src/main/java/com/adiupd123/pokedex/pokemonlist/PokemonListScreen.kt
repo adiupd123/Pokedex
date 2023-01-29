@@ -41,7 +41,8 @@ import com.adiupd123.pokedex.ui.theme.RobotoCondensed
 
 @Composable
 fun PokemonListScreen(
-    navController: NavController
+    navController: NavController,
+    viewModel: PokemonListViewModel = hiltViewModel()
 ){
     Surface(
         color = MaterialTheme.colors.background,
@@ -61,7 +62,7 @@ fun PokemonListScreen(
                     .fillMaxWidth()
                     .padding(16.dp)
             ){
-
+                viewModel.searchPokemonList(it)
             }
             Spacer(modifier = Modifier.height(16.dp))
             PokemonList(navController = navController)
@@ -97,7 +98,7 @@ fun SearchBar(
                 .background(White, CircleShape)
                 .padding(horizontal = 20.dp, vertical = 12.dp)
                 .onFocusChanged {
-                    isHintDisplayed = !it.isFocused
+                    isHintDisplayed = !it.isFocused && text.isNotEmpty()
                 }
         )
         if(isHintDisplayed){
@@ -119,6 +120,7 @@ fun PokemonList(
     val endReached by remember { viewModel.endReached }
     val loadError by remember { viewModel.loadError }
     val isLoading by remember { viewModel.isLoading }
+    val isSearching by remember { viewModel.isSearching }
 
     LazyColumn(contentPadding = PaddingValues(16.dp)){
         val itemCount = if(pokemonList.size % 2 == 0){
@@ -127,7 +129,7 @@ fun PokemonList(
             pokemonList.size / 2 + 1
         }
         items(itemCount){
-            if(it >= itemCount - 1 && !endReached && !isLoading){
+            if(it >= itemCount - 1 && !endReached && !isLoading && !isSearching){
                 viewModel.loadPokemonPaginated()
             }
             PokedexRow(rowIndex = it, entries = pokemonList, navController = navController)
