@@ -17,10 +17,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.adiupd123.pokedex.pokemondetail.PokemonDetailScreen
 import com.adiupd123.pokedex.pokemonlist.PokemonListScreen
 import com.adiupd123.pokedex.ui.theme.PokedexTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
+import java.util.*
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -54,7 +56,11 @@ class MainActivity : ComponentActivity() {
                         val pokemonName = remember {
                             it.arguments?.getString("pokemonName")
                         }
-
+                        PokemonDetailScreen(
+                            dominantColor = dominantColor,
+                            pokemonName = pokemonName?.toLowerCase(Locale.ROOT) ?: "",
+                            navController = navController
+                        )
                     }
                 }
             }
