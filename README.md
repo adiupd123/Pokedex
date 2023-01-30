@@ -14,9 +14,6 @@
 * Implemented <b>pagination</b> and powerful <b>search</b> functionality.
 * Clickable items show pokemon’s stats includes: pokemon’s photo, type and feature
 
-## Demo
-
-
 ## Technologies
 
 <p>
@@ -33,6 +30,3 @@ Pokedex was built with MVVM Architecture. MVVM (Model-View-ViewModel) is an arch
 1. Model: Represents the data and business logic of the application.
 2. View: The user interface that displays the data from the model.
 3. ViewModel: A bridge between the Model and the View that prepares the data to be displayed in the View. The ViewModel also handles UI-related tasks such as data validation and error handling.
-
-## APK
-
