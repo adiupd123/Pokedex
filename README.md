@@ -19,12 +19,13 @@
 
 ## Technologies
 
-Pokedex demonstrates modern Android development using Jetpack Compose with Hilt, ViewModels based on MVVM architecture.
 <p>
-<img src="https://user-images.githubusercontent.com/78906777/215393026-920cef2c-6d5c-4b66-8cea-bcc9c7827ee5.png" width="300" alt="pokeapi"/>
-<img src="https://user-images.githubusercontent.com/78906777/215395311-874201ba-da6d-4b91-a14f-5dd58a4f200f.png" width="300" height="150" alt="kotlin" />
-<img src="https://user-images.githubusercontent.com/78906777/215394528-2fd5d861-909b-42a9-995c-c346388fc30e.png" width="400" height="150" alt="compose" />
+<img src="https://user-images.githubusercontent.com/78906777/215395311-874201ba-da6d-4b91-a14f-5dd58a4f200f.png" width="225" height="100" alt="kotlin" />
+<img src="https://user-images.githubusercontent.com/78906777/215394528-2fd5d861-909b-42a9-995c-c346388fc30e.png" width="300" height="100" alt="compose" />
+<img src="https://user-images.githubusercontent.com/78906777/215393026-920cef2c-6d5c-4b66-8cea-bcc9c7827ee5.png" width="225" alt="pokeapi"/>
 </p>
+
+Pokedex demonstrates modern Android development using Jetpack Compose with Hilt, ViewModels based on MVVM architecture.
 
 ## Architecture
 
