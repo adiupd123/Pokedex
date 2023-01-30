@@ -33,6 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import coil.compose.AsyncImagePainter
 import coil.request.ImageRequest
 import com.adiupd123.pokedex.R
 import com.adiupd123.pokedex.data.models.PokemonListEntry.PokedexListEntry
@@ -192,12 +193,15 @@ fun PokedexEntry(
                     modifier = Modifier
                         .size(120.dp)
                         .align(CenterHorizontally),
+                    onSuccess = { success ->
+                        val drawable = success.result.drawable
+                        viewModel.calcDominantColor(drawable) { color ->
+                            dominantColor = color
+                        }
+                    }
                 )
                 // Remaining Task
                 // Choose dominant color
-                //viewModel.calcDominantColor(it) { color ->
-                //                                dominantColor = color
-                //                            }
                 Text(
                     text = entry.pokemonName,
                     fontFamily = RobotoCondensed,
