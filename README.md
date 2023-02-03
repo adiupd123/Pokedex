@@ -30,3 +30,42 @@ Pokedex was built with MVVM Architecture. MVVM (Model-View-ViewModel) is an arch
 1. Model: Represents the data and business logic of the application.
 2. View: The user interface that displays the data from the model.
 3. ViewModel: A bridge between the Model and the View that prepares the data to be displayed in the View. The ViewModel also handles UI-related tasks such as data validation and error handling.
+
+## Requirements
+
+*   [Android Studio](https://developer.android.com/studio) (installed on a Linux, Mac or Windows machine)
+
+*   Android device in
+    [developer mode](https://developer.android.com/studio/debug/dev-options)
+    with USB debugging enabled
+
+*   USB cable (to connect Android device to your computer)
+
+## Build and run
+
+### Step 1. Clone App source code
+
+Clone the GitHub repository to your computer to get the
+application.
+
+```
+https://https://github.com/adiupd123/Pokedex
+```
+
+Open the App's source code in Android Studio. To do this, open Android
+Studio and select `Open an existing project`, going to the folder containing the Project folder
+
+### Step 2. Build the Android Studio project
+
+Select `Build -> Make Project` and check that the project builds successfully.
+You will need Android SDK configured in the settings. You'll need at least SDK
+version 23. The `build.gradle` file will prompt you to download any missing
+libraries.
+
+### Step 3. Install and run the app
+
+Connect the Android device to the computer and be sure to approve any ADB
+permission prompts that appear on your phone. Select `Run -> Run app.` Select
+the deployment target in the connected devices to the device on which the app
+will be installed. This will install the app on the device.
+
